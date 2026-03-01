@@ -31,6 +31,7 @@ const messages: Record<Locale, MessageMap> = {
     },
     sidebar: {
       new: "New workflow",
+      github: "Open on GitHub",
       searchPlaceholder: "Search workflows...",
       empty: "No workflows",
       noMatch: "No matches",
@@ -110,6 +111,7 @@ const messages: Record<Locale, MessageMap> = {
     },
     sidebar: {
       new: "新建工作流",
+      github: "在 GitHub 打开",
       searchPlaceholder: "搜索工作流...",
       empty: "暂无工作流",
       noMatch: "无匹配结果",
@@ -189,6 +191,7 @@ const messages: Record<Locale, MessageMap> = {
     },
     sidebar: {
       new: "新しいワークフロー",
+      github: "GitHub で開く",
       searchPlaceholder: "ワークフローを検索...",
       empty: "ワークフローがありません",
       noMatch: "一致する結果がありません",

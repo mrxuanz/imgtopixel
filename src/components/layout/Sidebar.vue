@@ -4,6 +4,7 @@ import { NScrollbar, NIcon } from "naive-ui";
 import {
   AddOutline,
   EllipsisHorizontalOutline,
+  LogoGithub,
   SearchOutline,
 } from "@vicons/ionicons5";
 import { useI18n } from "../../i18n";
@@ -152,6 +153,20 @@ const vFocus = { mounted: (el: HTMLElement) => el.focus() };
         </li>
       </ul>
     </n-scrollbar>
+
+    <div class="sidebar-footer">
+      <a
+        class="github-link"
+        href="https://github.com/mrxuanz/imgtopixel"
+        target="_blank"
+        rel="noopener noreferrer"
+        :aria-label="t('sidebar.github')"
+        :title="t('sidebar.github')"
+      >
+        <n-icon size="14"><LogoGithub /></n-icon>
+        <span>GitHub</span>
+      </a>
+    </div>
   </aside>
 </template>
 
@@ -159,11 +174,13 @@ const vFocus = { mounted: (el: HTMLElement) => el.focus() };
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 100%;
   flex-shrink: 0;
   border-right: 1px solid #e8e8ef;
   background: #fff;
   height: 100%;
+  min-height: 0;
+  overflow: hidden;
 }
 .sidebar-header {
   display: flex;
@@ -229,6 +246,34 @@ const vFocus = { mounted: (el: HTMLElement) => el.focus() };
 }
 .sidebar-scroll {
   flex: 1;
+  min-height: 0;
+  -webkit-overflow-scrolling: touch;
+}
+.sidebar-footer {
+  flex-shrink: 0;
+  border-top: 1px solid #e8e8ef;
+  background: #fff;
+  padding: 8px;
+  padding-bottom: max(8px, env(safe-area-inset-bottom));
+}
+.github-link {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #666;
+  text-decoration: none;
+  transition:
+    color 0.15s,
+    background 0.15s;
+}
+.github-link:hover {
+  color: #111;
+  background: rgba(0, 0, 0, 0.06);
 }
 .workflow-list {
   list-style: none;

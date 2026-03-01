@@ -60,8 +60,9 @@ const activeWorkflow = computed(() => store.activeWorkflow);
 
       <n-drawer v-model:show="drawerOpen" :width="240" placement="left">
         <n-drawer-content
+          class="drawer-content"
           :native-scrollbar="false"
-          body-content-style="padding:0"
+          body-content-style="padding:0; height:100%; display:flex; flex-direction:column; min-height:0;"
         >
           <template #header>
             <div class="drawer-header">
@@ -93,6 +94,7 @@ const activeWorkflow = computed(() => store.activeWorkflow);
             </div>
           </template>
           <Sidebar
+            class="drawer-sidebar"
             :workflows="store.workflows"
             :active-id="store.activeId"
             hide-header
@@ -121,6 +123,24 @@ const activeWorkflow = computed(() => store.activeWorkflow);
 }
 .desktop-sidebar {
   display: flex;
+  width: 200px;
+  flex-shrink: 0;
+  min-height: 0;
+}
+.drawer-sidebar {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+}
+:deep(.drawer-content .n-drawer-body-content-wrapper) {
+  height: 100%;
+  min-height: 0;
+}
+:deep(.drawer-content .n-drawer-body-content) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
 }
 .main-area {
   display: flex;
