@@ -1,11 +1,17 @@
 # imgtopixel（像素素材规范化）
 
+🚀 **[在线体验 Demo](https://pixel.neverenddream.top)**
+
 一个浏览器端的节点式工作流工具，用来把 AI 生成的“像素风”素材规范化：去背景、识别像素块、按目标网格像素化/重采样，得到更适合编辑和复用的结果。适用于 AI 像素艺术素材，以及游戏引擎剪纸/切片动画的 AI 素材调整。
 
 语言文档：
 - [English](../README.md)
 - 中文（本页）
 - [日本語](README.ja.md)
+
+## 演示 (Demo)
+
+![Workflow demo](images/readme/workflow-demo.gif)
 
 ## 背景与痛点
 

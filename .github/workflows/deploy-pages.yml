@@ -39,11 +39,16 @@ jobs:
         id: base
         shell: bash
         run: |
-          REPO_NAME="${GITHUB_REPOSITORY#*/}"
-          if [[ "$REPO_NAME" == *.github.io ]]; then
+          # 检查是否配置了自定义域名文件 CNAME
+          if [ -f CNAME ]; then
             echo "base=/" >> "$GITHUB_OUTPUT"
           else
-            echo "base=/$REPO_NAME/" >> "$GITHUB_OUTPUT"
+            REPO_NAME="${GITHUB_REPOSITORY#*/}"
+            if [[ "$REPO_NAME" == *.github.io ]]; then
+              echo "base=/" >> "$GITHUB_OUTPUT"
+            else
+              echo "base=/$REPO_NAME/" >> "$GITHUB_OUTPUT"
+            fi
           fi
 
       - name: Build site
