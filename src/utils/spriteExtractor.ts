@@ -75,7 +75,7 @@ export function extractSprites(image: ImageData): ExtractSpritesResult {
     return { sprites: [], preview };
   }
 
-  const mergedRects = rects;
+  const mergedRects = mergeRects(rects);
   const minArea = Math.max(width * height * 0.0005, 16);
   const sprites: ExtractedSprite[] = [];
 
