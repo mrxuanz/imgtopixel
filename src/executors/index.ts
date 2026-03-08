@@ -6,11 +6,13 @@ import type {
   RemoveBgNodeData,
   AiRemoveBgNodeData,
   PixelateNodeData,
+  SpriteNodeData,
 } from "../types/nodes";
 import { uploadExecutor } from "./uploadExecutor";
 import { removeBgExecutor } from "./removeBgExecutor";
 import { aiRemoveBgExecutor } from "./aiRemoveBgExecutor";
 import { pixelateExecutor } from "./pixelateExecutor";
+import { spriteExecutor } from "./spriteExecutor";
 
 type NodeExecutor = (data: unknown, input: NodeOutput) => Promise<NodeOutput>;
 
@@ -20,6 +22,7 @@ const executors: Partial<Record<NodeType, NodeExecutor>> = {
   airemovebg: (data, input) =>
     aiRemoveBgExecutor(data as AiRemoveBgNodeData, input),
   pixelate: (data, input) => pixelateExecutor(data as PixelateNodeData, input),
+  sprite: (data, input) => spriteExecutor(data as SpriteNodeData, input),
 };
 
 function topoSort(nodes: Node[], edges: Edge[]): string[] {

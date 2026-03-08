@@ -20,3 +20,7 @@ export interface PixelateNodeData {
 export interface AiRemoveBgNodeData {
   label: string;
 }
+
+export interface SpriteNodeData {
+  label: string;
+}

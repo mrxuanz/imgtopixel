@@ -12,6 +12,7 @@ import EdgeWithDelete from "../nodes/EdgeWithDelete.vue";
 import AiRemoveBgNode from "../nodes/AiRemoveBgNode.vue";
 import PixelateNode from "../nodes/PixelateNode.vue";
 import RemoveBgNode from "../nodes/RemoveBgNode.vue";
+import SpriteNode from "../nodes/SpriteNode.vue";
 import UploadNode from "../nodes/UploadNode.vue";
 import { useWorkflowStore } from "../stores/workflowList";
 import type { CanvasNodeDataMap, CanvasNodeType } from "../types/canvas";
@@ -36,6 +37,7 @@ const nodeTypes = markRaw({
   removebg: RemoveBgNode,
   airemovebg: AiRemoveBgNode,
   pixelate: PixelateNode,
+  sprite: SpriteNode,
 }) as NodeTypesObject;
 const edgeTypes = markRaw({ default: EdgeWithDelete });
 
@@ -78,6 +80,9 @@ function getNodeDefaults(): CanvasNodeDataMap {
       targetW: 32,
       targetH: 32,
       pixelMode: "center",
+    },
+    sprite: {
+      label: t("nodes.sprite"),
     },
   };
 }
@@ -383,6 +388,13 @@ defineExpose({ handleRun, isRunning });
               <span class="di-desc">{{ t("nodesDesc.pixelate") }}</span>
             </div>
           </button>
+          <button class="drawer-item" @click="addNode('sprite', addFromNodeId)">
+            <span class="di-icon sprite-icon">🧩</span>
+            <div class="di-info">
+              <span class="di-name">{{ t("nodes.sprite") }}</span>
+              <span class="di-desc">{{ t("nodesDesc.sprite") }}</span>
+            </div>
+          </button>
         </div>
       </div>
     </Transition>
@@ -641,6 +653,9 @@ defineExpose({ handleRun, isRunning });
 }
 .pixelate-icon {
   background: rgba(99, 200, 130, 0.1);
+}
+.sprite-icon {
+  background: rgba(99, 190, 255, 0.16);
 }
 .di-info {
   display: flex;

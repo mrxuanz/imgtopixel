@@ -2,17 +2,19 @@ import type {
   AiRemoveBgNodeData,
   PixelateNodeData,
   RemoveBgNodeData,
+  SpriteNodeData,
   UploadNodeData,
 } from "./nodes";
 import type { NodeType } from "./workflow";
 
-export type CanvasNodeType = Exclude<NodeType, "sprite">;
+export type CanvasNodeType = NodeType;
 
 export interface CanvasNodeDataMap {
   upload: UploadNodeData;
   removebg: RemoveBgNodeData;
   airemovebg: AiRemoveBgNodeData;
   pixelate: PixelateNodeData;
+  sprite: SpriteNodeData;
 }
 
 export function isCanvasNodeType(type: unknown): type is CanvasNodeType {
@@ -20,6 +22,7 @@ export function isCanvasNodeType(type: unknown): type is CanvasNodeType {
     type === "upload" ||
     type === "removebg" ||
     type === "airemovebg" ||
-    type === "pixelate"
+    type === "pixelate" ||
+    type === "sprite"
   );
 }

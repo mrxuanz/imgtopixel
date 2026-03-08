@@ -53,6 +53,7 @@ const messages: Record<Locale, MessageMap> = {
       removeBg: "Remove background",
       aiRemoveBg: "AI remove background",
       pixelate: "Pixelate",
+      sprite: "Sprite extractor",
       addNext: "Add next node",
       deleteNode: "Delete node",
     },
@@ -61,6 +62,7 @@ const messages: Record<Locale, MessageMap> = {
       removeBg: "Automatically remove image background",
       aiRemoveBg: "Use an AI model to remove backgrounds precisely",
       pixelate: "Convert images into pixel art",
+      sprite: "Extract individual sprites from a sprite sheet",
     },
     upload: {
       drop: "Drag or click to upload",
@@ -70,6 +72,9 @@ const messages: Record<Locale, MessageMap> = {
     },
     removeBg: { tolerance: "Tolerance" },
     aiRemoveBg: { hint: "Automatically remove background using an AI model" },
+    sprite: {
+      hint: "Split connected foreground regions into separate sprites",
+    },
     pixelate: {
       mode: "Mode",
       modeAuto: "Auto detect",
@@ -133,6 +138,7 @@ const messages: Record<Locale, MessageMap> = {
       removeBg: "去除背景",
       aiRemoveBg: "AI 去除背景",
       pixelate: "像素化",
+      sprite: "Sprite 提取器",
       addNext: "添加下一个节点",
       deleteNode: "删除节点",
     },
@@ -141,6 +147,7 @@ const messages: Record<Locale, MessageMap> = {
       removeBg: "自动去除图片背景",
       aiRemoveBg: "使用 AI 模型精准去除背景",
       pixelate: "将图片转换为像素风格",
+      sprite: "从精灵图中提取独立 Sprite",
     },
     upload: {
       drop: "拖拽或点击上传",
@@ -150,6 +157,9 @@ const messages: Record<Locale, MessageMap> = {
     },
     removeBg: { tolerance: "容差" },
     aiRemoveBg: { hint: "使用 AI 模型自动去除背景" },
+    sprite: {
+      hint: "按前景连通区域自动切分独立 Sprite",
+    },
     pixelate: {
       mode: "模式",
       modeAuto: "自动检测",
@@ -213,6 +223,7 @@ const messages: Record<Locale, MessageMap> = {
       removeBg: "背景を削除",
       aiRemoveBg: "AI 背景削除",
       pixelate: "ピクセル化",
+      sprite: "スプライト抽出",
       addNext: "次のノードを追加",
       deleteNode: "ノードを削除",
     },
@@ -221,6 +232,7 @@ const messages: Record<Locale, MessageMap> = {
       removeBg: "画像の背景を自動で削除",
       aiRemoveBg: "AI モデルで背景を高精度に削除",
       pixelate: "画像をピクセルアートに変換",
+      sprite: "スプライトシートから個別スプライトを抽出",
     },
     upload: {
       drop: "ドラッグまたはクリックしてアップロード",
@@ -230,6 +242,9 @@ const messages: Record<Locale, MessageMap> = {
     },
     removeBg: { tolerance: "許容差" },
     aiRemoveBg: { hint: "AI モデルで背景を自動削除" },
+    sprite: {
+      hint: "前景の連結領域を個別スプライトに分割",
+    },
     pixelate: {
       mode: "モード",
       modeAuto: "自動検出",
