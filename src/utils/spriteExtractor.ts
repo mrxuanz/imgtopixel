@@ -75,7 +75,7 @@ export function extractSprites(image: ImageData): ExtractSpritesResult {
     return { sprites: [], preview };
   }
 
-  const mergedRects = mergeRects(rects);
+  const mergedRects = rects;
   const minArea = Math.max(width * height * 0.0005, 16);
   const sprites: ExtractedSprite[] = [];
 
@@ -111,14 +111,10 @@ function findConnectedComponentRects(
   const visited = new Uint8Array(mask.length);
   const rects: Rect[] = [];
   const neighbors: Array<readonly [number, number]> = [
-    [-1, -1],
     [0, -1],
-    [1, -1],
     [-1, 0],
     [1, 0],
-    [-1, 1],
     [0, 1],
-    [1, 1],
   ];
 
   for (let y = 0; y < height; y++) {
