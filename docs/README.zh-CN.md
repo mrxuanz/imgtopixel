@@ -37,6 +37,7 @@ imgtopixel 重点解决“像素网格规范化”问题：
 - `RemoveBg`（本地：边缘背景色估计 + BFS 扩散）
 - `AiRemoveBg`（`@imgly/background-removal`）
 - `Pixelate`（`Auto` / `Manual Size` / `Manual Target`）
+- `Sprite`（自动从背景中提取多个独立的子部件/精灵图）
 
 执行行为：
 - 结果面板预览末端节点输出，可逐张下载。

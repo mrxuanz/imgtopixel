@@ -37,6 +37,7 @@ imgtopixel は、見た目だけピクセル風の画像を「編集しやすく
 - `RemoveBg`（ローカル: 端の背景色推定 + BFS 拡張）
 - `AiRemoveBg`（`@imgly/background-removal`）
 - `Pixelate`（`Auto` / `Manual Size` / `Manual Target`）
+- `Sprite`（不透明な背景から単一のパーツ/スプライトを抽出）
 
 実行時の挙動:
 - 結果パネルでは終端ノード出力をプレビューし、画像ごとにダウンロード可能。

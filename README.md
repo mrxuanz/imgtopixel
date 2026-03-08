@@ -37,6 +37,7 @@ Workflow nodes:
 - `RemoveBg` (local, edge-color + BFS flood)
 - `AiRemoveBg` (powered by `@imgly/background-removal`)
 - `Pixelate` (`Auto`, `Manual Size`, `Manual Target`)
+- `Sprite` (extract individual parts/sprites from opaque background)
 
 Runtime behavior:
 - Result panel previews outputs from terminal nodes and supports per-image download.
